@@ -1,0 +1,19 @@
+.btn{
+    width: 100px;
+    height: 50px;
+}
+
+.btn-blue{
+    color: black;
+    background-color: blue;
+}
+
+.btn-red{
+    color: black;
+    background-color: red;
+}
+
+.btn-white{
+    color: blueviolet;
+    background-color: aliceblue;
+}
