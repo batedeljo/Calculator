@@ -1,0 +1,19 @@
+.number-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: max-content;
+    margin: 24px auto;
+}
+
+
+.calculator-screen{
+    margin: 24px auto;
+    height: 40px;
+    width: 150px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
