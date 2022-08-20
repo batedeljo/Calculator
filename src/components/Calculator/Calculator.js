@@ -5,7 +5,7 @@ import "./calculator.css";
 function Calculator() {
   const [number, setNumber] = useState([]);
   const [sign, setSign] = useState([]);
-  const Number = [7, 8, 9, "+", 4, 5, 6, "-", 1, 2, 3, "*", "/", 0, "="];
+  const Number = [7, 8, 9, "+", 4, 5, 6, "-", 1, 2, 3, "*", "/", 0, "=", "C"];
 
   const getNumber = (data) => {
     if (typeof data === "number") {
@@ -50,7 +50,10 @@ function Calculator() {
         return firstNum / secondNum;
     }
   };
-  console.log(number);
+  const resetCalculator = () => {
+    setNumber([]);
+    setSign([]);
+  };
   return (
     <div>
       <div className="calculator-screen">
@@ -60,6 +63,16 @@ function Calculator() {
       </div>
       <div className="number-container">
         {Number.map((item, index) => {
+          if (item === "C") {
+            return (
+              <Button
+                key={index}
+                onclickHandler={resetCalculator}
+                text={item}
+                btnStyle={"btn-white"}
+              />
+            );
+          }
           return (
             <Button
               key={index}
