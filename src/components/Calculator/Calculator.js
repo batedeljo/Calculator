@@ -63,9 +63,6 @@ function Calculator() {
       </div>
       <div className="number-container">
         {Number.map((item, index) => {
-          if (typeof item === "string") {
-            return <Button key={index} text={item} btnStyle={"btn-blue"} />;
-          }
           if (item === "C") {
             return (
               <Button
@@ -73,6 +70,18 @@ function Calculator() {
                 onclickHandler={resetCalculator}
                 text={item}
                 btnStyle={"btn-blue"}
+                data={item}
+              />
+            );
+          }
+          if (typeof item === "string") {
+            return (
+              <Button
+                key={index}
+                btnStyle={"btn-blue"}
+                text={item}
+                data={item}
+                onclickHandler={getNumber}
               />
             );
           }
