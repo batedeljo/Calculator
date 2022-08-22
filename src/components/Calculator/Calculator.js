@@ -63,13 +63,16 @@ function Calculator() {
       </div>
       <div className="number-container">
         {Number.map((item, index) => {
+          if (typeof item === "string") {
+            return <Button key={index} text={item} btnStyle={"btn-blue"} />;
+          }
           if (item === "C") {
             return (
               <Button
                 key={index}
                 onclickHandler={resetCalculator}
                 text={item}
-                btnStyle={"btn-white"}
+                btnStyle={"btn-blue"}
               />
             );
           }

@@ -1,11 +1,13 @@
 .btn{
     width: 100px;
     height: 50px;
+    border-radius: 25%;
+    font-size: 25px;
 }
 
 .btn-blue{
     color: black;
-    background-color: blue;
+    background-color: rgb(0, 136, 255);
 }
 
 .btn-red{
@@ -14,6 +16,6 @@
 }
 
 .btn-white{
-    color: blueviolet;
-    background-color: aliceblue;
+    color: black;
+    background-color: whitesmoke;
 }
